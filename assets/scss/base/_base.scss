@@ -1,0 +1,22 @@
+// normas generales entregadas para el tamaño escritorio
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $monospace;
+    margin: 0;
+    padding: 0;
+}
+/*el div tenia un formato fijo ahora de ajusta al 100% por lo que da la vista que se queria en tamaño lg*/
+@include respond-to($bp-lg) {
+    body {
+        //tamaño de pantalla
+        width: 100vw;
+    }
+    .contenedor {
+        width: 100%;
+        margin: 0 auto;
+    }
+};
