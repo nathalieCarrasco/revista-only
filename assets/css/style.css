@@ -47,6 +47,26 @@ img {
     padding: 0.3125rem 0rem;
   }
 }
+.grupo {
+  padding: 0.312rem 0.625rem;
+  border-width: 0;
+}
+.grupo .grupo button {
+  background-color: coral;
+  color: #ffff;
+}
+
+@media only screen and (min-width: 992px) {
+  .grupo input,
+.grupo button {
+    display: inline-block;
+    font-size: 13px;
+  }
+}
+.input-menu {
+  border-radius: 1.875rem;
+}
+
 .container {
   display: grid;
   margin: 0 auto;

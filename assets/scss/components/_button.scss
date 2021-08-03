@@ -1,0 +1,24 @@
+
+.grupo {
+    padding: 0.312rem 0.625rem;
+    border-width: 0;
+
+
+    .grupo button {
+        background-color: $coral;
+        color: $white;
+    }
+}
+
+
+
+//lg 
+
+@include respond-to($bp-lg) {
+
+    .grupo input,
+    .grupo button {
+        display: inline-block;
+        font-size: 13px;
+    }
+}
