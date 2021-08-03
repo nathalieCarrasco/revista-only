@@ -1,0 +1,27 @@
+// aside en mobile no se debe ver 
+
+.aside {
+    display: none;
+}
+
+@include respond-to($bp-md) {
+    .contenido {
+
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .aside {
+
+        display: block;
+    }
+    .about {
+
+        width: 100%;
+        border-bottom: 0.0625rem solid gray;
+    }
+
+    .noticias-destacadas {
+        margin-bottom: 3.125rem;
+    }
+};

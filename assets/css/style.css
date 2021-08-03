@@ -1,18 +1,379 @@
-/* Error: Undefined variable.
- *   ,
- * 8 |     font-family: $monospace;
- *   |                  ^^^^^^^^^^
- *   '
- *   assets\scss\base\_base.scss 8:18  @import
- *   assets\scss\main.scss 8:8         root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Undefined variable.\a   \2577 \a 8 \2502      font-family: $monospace;\d\a   \2502                   ^^^^^^^^^^\a   \2575 \a   assets\\scss\\base\\_base.scss 8:18  @import\a   assets\\scss\\main.scss 8:8         root stylesheet";
+@charset "UTF-8";
+/* importacion al manifiesto principal segun 7-1 */
+* {
+  box-sizing: border-box;
 }
+
+body {
+  font-family: monospace;
+  margin: 0;
+  padding: 0;
+}
+
+/*el div tenia un formato fijo ahora de ajusta al 100% por lo que da la vista que se queria en tamaño lg*/
+@media only screen and (min-width: 992px) {
+  body {
+    width: 100vw;
+  }
+
+  .contenedor {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+img {
+  width: 100%;
+  height: auto;
+}
+
+.article {
+  margin: 0.3125rem;
+  cursor: pointer;
+}
+.article__paragraph {
+  padding: 0.3125rem 0.625rem;
+}
+
+@media only screen and (min-width: 992px) {
+  .article {
+    width: 30%;
+    display: inline-block;
+  }
+  .article__image {
+    width: 100%;
+    height: auto;
+  }
+  .article__paragraph {
+    padding: 0.3125rem 0rem;
+  }
+}
+.container {
+  display: grid;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+@media only screen and (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.col-sm-12 {
+  grid-column: span 12;
+}
+
+.col-sm-11 {
+  grid-column: span 11;
+}
+
+.col-sm-10 {
+  grid-column: span 10;
+}
+
+.col-sm-9 {
+  grid-column: span 9;
+}
+
+.col-sm-8 {
+  grid-column: span 8;
+}
+
+.col-sm-7 {
+  grid-column: span 7;
+}
+
+.col-sm-6 {
+  grid-column: span 6;
+}
+
+.col-sm-5 {
+  grid-column: span 5;
+}
+
+.col-sm-4 {
+  grid-column: span 4;
+}
+
+.col-sm-3 {
+  grid-column: span 3;
+}
+
+.col-sm-2 {
+  grid-column: span 2;
+}
+
+.col-sm-1 {
+  grid-column: span 1;
+}
+
+@media only screen and (min-width: 768px) {
+  .col-md-12 {
+    grid-column: span 12;
+  }
+
+  .col-md-11 {
+    grid-column: span 11;
+  }
+
+  .col-md-10 {
+    grid-column: span 10;
+  }
+
+  .col-md-9 {
+    grid-column: span 9;
+  }
+
+  .col-md-8 {
+    grid-column: span 8;
+  }
+
+  .col-md-7 {
+    grid-column: span 7;
+  }
+
+  .col-md-6 {
+    grid-column: span 6;
+  }
+
+  .col-md-5 {
+    grid-column: span 5;
+  }
+
+  .col-md-4 {
+    grid-column: span 4;
+  }
+
+  .col-md-3 {
+    grid-column: span 3;
+  }
+
+  .col-md-2 {
+    grid-column: span 2;
+  }
+
+  .col-md-1 {
+    grid-column: span 1;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .col-lg-12 {
+    grid-column: span 12;
+  }
+
+  .col-lg-11 {
+    grid-column: span 11;
+  }
+
+  .col-lg-10 {
+    grid-column: span 10;
+  }
+
+  .col-lg-9 {
+    grid-column: span 9;
+  }
+
+  .col-lg-8 {
+    grid-column: span 8;
+  }
+
+  .col-lg-7 {
+    grid-column: span 7;
+  }
+
+  .col-lg-6 {
+    grid-column: span 6;
+  }
+
+  .col-lg-5 {
+    grid-column: span 5;
+  }
+
+  .col-lg-4 {
+    grid-column: span 4;
+  }
+
+  .col-lg-3 {
+    grid-column: span 3;
+  }
+
+  .col-lg-2 {
+    grid-column: span 2;
+  }
+
+  .col-lg-1 {
+    grid-column: span 1;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .col-xl-12 {
+    grid-column: span 12;
+  }
+
+  .col-xl-11 {
+    grid-column: span 11;
+  }
+
+  .col-xl-10 {
+    grid-column: span 10;
+  }
+
+  .col-xl-9 {
+    grid-column: span 9;
+  }
+
+  .col-xl-8 {
+    grid-column: span 8;
+  }
+
+  .col-xl-7 {
+    grid-column: span 7;
+  }
+
+  .col-xl-6 {
+    grid-column: span 6;
+  }
+
+  .col-xl-5 {
+    grid-column: span 5;
+  }
+
+  .col-xl-4 {
+    grid-column: span 4;
+  }
+
+  .col-xl-3 {
+    grid-column: span 3;
+  }
+
+  .col-xl-2 {
+    grid-column: span 2;
+  }
+
+  .col-xl-1 {
+    grid-column: span 1;
+  }
+}
+/*estilo sin media qery*/
+.navigation {
+  padding: 0.625rem;
+  border-bottom: 0.0625rem solid gray;
+}
+
+.navigation__logo {
+  font-weight: bold;
+  text-transform: uppercase;
+  align-self: center;
+  font-size: 24px;
+}
+
+.navigation__container {
+  text-align: right;
+}
+
+.navigation__list {
+  list-style-type: none;
+  margin: inherit;
+  padding: inherit;
+}
+
+.navigation__item {
+  align-self: center;
+  display: inline-block;
+}
+
+.navigation__item a {
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.item--display_none {
+  display: none;
+}
+
+@media only screen and (min-width: 992px) {
+  .navigation {
+    width: 100%;
+  }
+
+  .navigation__container {
+    width: 87%;
+  }
+
+  .navigation__list {
+    text-align: right;
+  }
+
+  .navigation__item {
+    display: inline-block;
+    text-align: right;
+  }
+
+  .navigation__item a {
+    padding: 0.5em 1em;
+  }
+}
+.aside {
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .contenido {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .aside {
+    display: block;
+  }
+
+  .about {
+    width: 100%;
+    border-bottom: 0.0625rem solid gray;
+  }
+
+  .noticias-destacadas {
+    margin-bottom: 3.125rem;
+  }
+}
+.newsletter {
+  background-color: #f2f4f5;
+  padding-top: 1.875rem;
+  padding-bottom: 1.875rem;
+  text-align: center;
+}
+.newsletter h2 {
+  font-size: 24px;
+}
+
+@media only screen and (min-width: 992px) {
+  .newsletter {
+    width: 100%;
+  }
+}
+.footer {
+  text-align: center;
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 992px) {
+  .footer {
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

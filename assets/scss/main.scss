@@ -6,14 +6,19 @@
 
 //base
 @import"base/base";
-@import"base/reset";
 @import"base/typography";
+@import"base/reset";
+
 
 // components
-
+@import"components/cards";
 
 // layout
 @import"layout/grid";
+@import"layout/navigation";
+@import"layout/contenedor";
+@import"layout/newsletter";
+@import"layout/footer";
 
 //pages
 

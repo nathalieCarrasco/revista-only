@@ -1,0 +1,27 @@
+// intento dar estilo de cards a los article de tarjetas
+
+
+//modo mobile
+.article {
+    margin: 0.3125rem;
+    cursor: pointer;
+    &__paragraph {
+        padding: 0.3125rem 0.625rem;
+    }
+}
+
+@include respond-to($bp-lg) {
+    // estilo escritorio dado 
+    .article {
+        //width: 210px;
+        width: 30%;
+        display: inline-block;
+        &__image {
+            width: 100%;
+            //height automamtico para las imagenes responsivas
+            height: auto;
+        }
+        &__paragraph {
+            padding: 0.3125rem 0rem;
+        }
+    }};

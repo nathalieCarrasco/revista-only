@@ -1,0 +1,19 @@
+.newsletter {
+
+    background-color: $gray;
+    padding-top: 1.875rem;
+    padding-bottom: 1.875rem;
+    text-align: center;
+    
+    
+    h2 {
+        font-size: 24px;
+    }
+}
+
+@include respond-to($bp-lg) {
+    //estilo dado modificado para que sea responsivo
+    .newsletter {
+        width: 100%;
+    }
+};
